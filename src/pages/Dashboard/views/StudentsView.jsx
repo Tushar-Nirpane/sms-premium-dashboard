@@ -4,10 +4,10 @@ import './Views.css';
 
 const StudentsView = () => {
   const students = [
-    { id: 'STU2024001', name: 'MANASVI PATIL', course: 'Computer Science', year: '3rd Year', email: 'manasvi@example.com', status: 'Active' },
+    { id: 'STU2024001', name: 'MANSVI PATIL', course: 'Computer Science', year: '3rd Year', email: 'manasvi@example.com', status: 'Active' },
     { id: 'STU2024002', name: 'TUSHAR NIRPANE', course: 'Electronics', year: '2nd Year', email: 'tushar.nirpane@engineering.edu', status: 'Active' },
     { id: 'STU2024003', name: 'ANOKHI PATIL', course: 'Mechanical', year: '4th Year', email: 'anokhi@example.com', status: 'Active' },
-    { id: 'STU2024004', name: 'PRAHI PATNE', course: 'Civil', year: '1st Year', email: 'prahi@example.com', status: 'Active' },
+    { id: 'STU2024004', name: 'PRACHI PATNE', course: 'Civil', year: '1st Year', email: 'prahi@example.com', status: 'Active' },
     { id: 'STU2024005', name: 'MANSI PARMAR', course: 'Computer Science', year: '3rd Year', email: 'mansi@example.com', status: 'Inactive' },
     { id: 'STU2024006', name: 'KETKI PATIL', course: 'Information Tech', year: '2nd Year', email: 'ketki@example.com', status: 'Active' },
   ];
