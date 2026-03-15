@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --primary-teal: #13b5a1; /* Approximate exact teal from screenshots */
+  --primary-teal-hover: #0f9181;
+  --secondary-blue: #0f3c5c;
+  --bg-light: #f8fafc; /* General app background */
+  --bg-white: #ffffff; /* Card/Component background */
+  
+  /* Text Colors */
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  
+  /* Status Colors */
+  --status-present: #0ea5e9; /* Blue in chart */
+  --status-absent: #ef4444;  /* Red in chart */
+  
+  --grade-a: #0ea5e9; /* Blue */
+  --grade-b: #10b981; /* Green */
+  --grade-c: #f59e0b; /* Orange */
+  --grade-d: #ef4444; /* Red */
+
+  /* Shadows and Borders */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05); /* Soft, diffuse shadow from screenshots */
+  
+  --border-radius-sm: 0.375rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  
+  --border-color: #e2e8f0;
+
+  /* 3D Animation Tokens */
+  --perspective: 1000px;
+  --transition-3d: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+button {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Base Utility Classes */
+.card {
+  background: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 1.5rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-teal);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+/* Base 3D Utility */
+.preserve-3d {
+  transform-style: preserve-3d;
+  perspective: var(--perspective);
+}
+
+/* Animation Keyframes */
+@keyframes float3d {
+  0% { transform: translateY(0) rotateX(0) rotateY(0); }
+  50% { transform: translateY(-10px) rotateX(2deg) rotateY(2deg); }
+  100% { transform: translateY(0) rotateX(0) rotateY(0); }
+}
+
+@keyframes entrance3d {
+  from {
+    opacity: 0;
+    transform: perspective(var(--perspective)) rotateX(-10deg) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(var(--perspective)) rotateX(0) translateY(0);
+  }
+}
+
+@keyframes slideInUp3d {
+  from {
+    opacity: 0;
+    transform: perspective(var(--perspective)) translateZ(-100px) translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(var(--perspective)) translateZ(0) translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float3d 6s ease-in-out infinite;
+}
+
+.animate-entrance {
+  animation: entrance3d 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.hover-3d {
+  transition: var(--transition-3d);
+}
+
+.hover-3d:hover {
+  transform: perspective(var(--perspective)) rotateX(5deg) rotateY(5deg) translateZ(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
