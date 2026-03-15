@@ -11,10 +11,10 @@ const gradeData = [
 ];
 
 const recentStudents = [
-  { name: 'MANASVI PATIL', id: 'STU2024001', course: 'Computer Science', gpa: '3.2' },
+  { name: 'MANSVI PATIL', id: 'STU2024001', course: 'Computer Science', gpa: '3.2' },
   { name: 'TUSHAR NIRPANE', id: 'STU2024002', course: 'Electronics', gpa: '3.9' },
   { name: 'ANOKHI PATIL', id: 'STU2024003', course: 'Mechanical', gpa: '3.9' },
-  { name: 'PRAHI PATNE', id: 'STU2024004', course: 'Civil', gpa: '3.5' },
+  { name: 'PRACHI PATNE', id: 'STU2024004', course: 'Civil', gpa: '3.5' },
   { name: 'MANSI PARMAR', id: 'STU2024005', course: 'Computer Science', gpa: '3.7' },
 ];
 
